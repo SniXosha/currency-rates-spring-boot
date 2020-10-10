@@ -1,5 +1,6 @@
 package com.preciouspayload.currencyrates.rates;
 
+import com.preciouspayload.currencyrates.rates.daily.DailyRatesDto;
 import com.preciouspayload.currencyrates.rates.daily.DailyRatesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,9 +20,9 @@ public class RatesServiceImpl implements RatesService {
     private final DailyRatesService dailyRatesService;
 
     @Override
-    public List<DailyRatesDto> ratesForMonth() {
+    public List<DailyRatesDto> rates(int days) {
         LocalDate current = now();
-        return range(0, 30)
+        return range(0, days)
                 .mapToObj(current::minusDays)
                 .map(dailyRatesService::rateFor)
                 .collect(toList());

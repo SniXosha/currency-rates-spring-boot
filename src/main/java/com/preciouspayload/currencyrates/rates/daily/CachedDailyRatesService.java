@@ -1,6 +1,5 @@
 package com.preciouspayload.currencyrates.rates.daily;
 
-import com.preciouspayload.currencyrates.rates.DailyRatesDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;

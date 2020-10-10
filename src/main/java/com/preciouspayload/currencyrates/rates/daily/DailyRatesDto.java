@@ -1,4 +1,4 @@
-package com.preciouspayload.currencyrates.rates;
+package com.preciouspayload.currencyrates.rates.daily;
 
 import lombok.Data;
 import lombok.SneakyThrows;

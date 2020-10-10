@@ -1,20 +1,14 @@
 package com.preciouspayload.currencyrates;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
+
+import static org.springframework.boot.SpringApplication.run;
 
 @EnableCaching
 @SpringBootApplication
 public class CurrencyRatesApplication {
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-
 	public static void main(String[] args) {
-		SpringApplication.run(CurrencyRatesApplication.class, args);
+		run(CurrencyRatesApplication.class, args);
 	}
 }

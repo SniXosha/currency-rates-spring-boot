@@ -1,6 +1,5 @@
 package com.preciouspayload.currencyrates.rates.daily;
 
-import com.preciouspayload.currencyrates.rates.DailyRatesDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -8,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
 
-import static com.preciouspayload.currencyrates.rates.DailyRatesDto.fromXml;
+import static com.preciouspayload.currencyrates.rates.daily.DailyRatesDto.fromXml;
 import static java.lang.String.format;
 import static java.time.format.DateTimeFormatter.ofPattern;
 
